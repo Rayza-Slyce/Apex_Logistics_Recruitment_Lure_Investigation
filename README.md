@@ -37,7 +37,7 @@ No files were executed during this investigation.
 
 This started from a LinkedIn post discussing a suspicious recruitment message.
 
-![LinkedIn post](01_linkedin_post.png)
+![LinkedIn post](Images/01_linkedin_post.png)
 
 At this stage:
 
@@ -53,7 +53,7 @@ So the focus remained on technical behaviour, not attribution.
 
 The link led to a Google Form that looked fairly convincing.
 
-![Google Form](02_google_form.png)
+![Google Form](Images/02_google_form.png)
 
 Nothing immediately stood out:
 
@@ -77,17 +77,17 @@ The link did not go directly to a company site. Instead, it used a shortened URL
 
 The destination wasn’t obvious from the form itself and was not visible in the page source.
 
-![Google Form source](05_google_form_source.png)
+![Google Form source](Images/05_google_form_source.png)
 
 I then followed the link using `curl` to trace where it actually led.
 
 Initial response:
 
-![Initial shortlink response](06_curl_tree_link.png)
+![Initial shortlink response](Images/06_curl_tree_link.png)
 
 Following the redirects revealed the actual destination:
 
-![Redirect chain](07_tree_redirect.png)
+![Redirect chain](Images/07_tree_redirect.png)
 
 Flow:
 
@@ -103,7 +103,7 @@ This confirmed the form wasn’t just collecting data, it was part of a delivery
 
 The Dropbox link resulted in a direct binary download:
 
-![Dropbox binary response](08_dropbox_content.png)
+![Dropbox binary response](Images/08_dropbox_content.png)
 
 Key observations:
 
@@ -118,7 +118,7 @@ This is far larger than a legitimate job document.
 
 The archive was downloaded in a controlled environment and hashed.
 
-![SHA256 hash](10_sha256sum_apex_payload.png)
+![SHA256 hash](Images/10_sha256sum_apex_payload.png)
 
 ### File Hash
 
@@ -138,7 +138,7 @@ Low or zero detections are not uncommon with newer or less widely distributed sa
 
 Listing the contents of the ZIP revealed the real structure:
 
-![ZIP contents](11_unzip_apex_payload.png)
+![ZIP contents](Images/11_unzip_apex_payload.png)
 
 Files included:
 
@@ -166,7 +166,7 @@ Instead, it shows:
 
 Basic inspection confirmed the key files were Windows PE binaries.
 
-![File analysis](12_file_analysis.png)
+![File analysis](Images/12_file_analysis.png)
 
 ---
 
@@ -174,7 +174,7 @@ Basic inspection confirmed the key files were Windows PE binaries.
 
 Further inspection of the executable showed:
 
-![Import analysis](13_c2r64.png)
+![Import analysis](Images/13_c2r64.png)
 
 DLL Name: AppvIsvSubsystems64.dll
 
