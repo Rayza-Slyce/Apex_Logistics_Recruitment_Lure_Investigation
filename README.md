@@ -121,6 +121,9 @@ The archive was downloaded in a controlled environment and hashed.
 f689830f201ed1612bfda4bb48e9dfba4bde9d2c4abc724f6e9f95060797e739
 
 This provides a unique identifier for the sample and allows for consistent tracking or comparison.
+The file hash was checked against VirusTotal, and no matches were found at the time of analysis.
+This may indicate the sample has not yet been widely submitted or detected. Despite the lack of detections, the structure of the payload and its delivery method remain strong indicators of malicious intent.
+Low or zero detections are not uncommon with newer or less widely distributed samples, particularly those delivered through targeted or short-lived campaigns.
 
 ---
 
