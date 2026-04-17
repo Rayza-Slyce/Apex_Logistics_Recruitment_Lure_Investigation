@@ -254,6 +254,6 @@ What stood out was how cleanly the attack chain was structured:
 
 Even without executing the file, the intent behind the structure is clear.
 
-I will be continuing this analysis further, focusing on deeper inspection of the payload and its behaviour in a controlled environment. At the very least, it’s a good opportunity to properly understand how these attacks work beyond the surface level.
+I will be continuing this analysis further, focusing on deeper inspection of the payload and observing its behaviour through controlled dynamic testing. This should give a clearer picture of how it actually operates beyond static analysis.
 
 ---
