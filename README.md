@@ -75,7 +75,11 @@ The link did not go directly to a company site. Instead, it used a shortened URL
 
 `tr.ee/DZz***`
 
-The destination wasn’t obvious from the form itself, so I followed it using `curl`.
+The destination wasn’t obvious from the form itself and was not visible in the page source.
+
+![Google Form source](05_google_form_source.png)
+
+I then followed the link using `curl` to trace where it actually led.
 
 Initial response:
 
