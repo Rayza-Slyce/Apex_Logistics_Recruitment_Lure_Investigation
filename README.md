@@ -95,7 +95,7 @@ Flow:
 - tr.ee shortlink  
 - Dropbox  
 
-This confirmed the form wasn’t just collecting data — it was part of a delivery chain.
+This confirmed the form wasn’t just collecting data, it was part of a delivery chain.
 
 ---
 
