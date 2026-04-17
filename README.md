@@ -183,8 +183,7 @@ The executable is designed to load this DLL from its local directory.
 - Strings analysis revealed references such as cmd.exe and http  
 - No clear command-and-control domains were visible  
 
-This suggests possible obfuscation or packing rather than a simple payload.
-
+Strings didn’t reveal anything meaningful, and combined with the unusually large DLL size (~100MB), this suggests the payload is likely packed or obfuscated rather than a straightforward executable.
 ---
 
 ## Likely Execution Flow
@@ -199,6 +198,8 @@ Based on the structure:
 6. A decoy file may open to distract the user  
 
 This aligns with common DLL sideloading attack patterns.
+
+This structure is designed to execute malicious code while presenting a legitimate-looking document to the user, reducing suspicion and increasing the likelihood of successful execution.
 
 ---
 
