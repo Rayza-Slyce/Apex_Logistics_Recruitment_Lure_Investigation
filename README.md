@@ -183,7 +183,7 @@ The executable is designed to load this DLL from its local directory.
 - Strings analysis revealed references such as cmd.exe and http  
 - No clear command-and-control domains were visible  
 
-Strings didn’t reveal anything meaningful, and combined with the unusually large DLL size (~100MB), this suggests the payload is likely packed or obfuscated rather than a straightforward executable.
+Strings didn’t reveal anything meaningful, and combined with the unusually large DLL size (~100MB), this suggests the payload is likely packed or obfuscated rather than a simple, easily inspectable binary.
 ---
 
 ## Likely Execution Flow
