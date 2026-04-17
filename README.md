@@ -185,6 +185,8 @@ This is important because:
 
 The executable is designed to load this DLL from its local directory.
 
+The combination of a large DLL, minimal readable strings, and reliance on DLL loading behaviour suggests the executable is acting primarily as a loader rather than containing the full payload logic itself.
+
 ---
 
 ## Additional Observations
@@ -194,6 +196,7 @@ The executable is designed to load this DLL from its local directory.
 - No clear command-and-control domains were visible  
 
 Strings didn’t reveal anything meaningful, and combined with the unusually large DLL size (~100MB), this suggests the payload is likely packed or obfuscated rather than a simple, easily inspectable binary.
+
 ---
 
 ## Likely Execution Flow
