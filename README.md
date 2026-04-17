@@ -5,7 +5,7 @@
 
 ## Introduction
 
-I came across this while casually scrolling LinkedIn. It wasn’t something I was actively hunting for, which is partly why it stood out.
+I came across this while casually scrolling LinkedIn. This post intrigued me, so I decided to dig into it and see what was actually behind it.
 
 The post described a recruitment-style lure using a Google Form that supposedly led to a suspicious payload. Rather than just take that at face value, I wanted to follow the chain myself and see what was actually happening behind it.
 
