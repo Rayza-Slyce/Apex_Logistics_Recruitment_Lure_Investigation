@@ -201,18 +201,21 @@ Strings didn’t reveal anything meaningful, and combined with the unusually lar
 
 ## Likely Execution Flow
 
-Based on the structure:
+Based on the observed structure, this attack relies on user interaction rather than automatic execution:
 
-1. User downloads the ZIP  
-2. Extracts the archive  
-3. Runs the EXE, believing it to be a document  
-4. The executable loads a local DLL (AppvIsvSubsystems64.dll)  
-5. The DLL executes its payload  
-6. A decoy file may open to distract the user  
+1. User clicks the link provided in the message
+2. Redirect chain leads to a Dropbox-hosted ZIP file
+3. The file is downloaded, either automatically or via user prompt
+4. User extracts the archive to view its contents
+5. The archive contains a file named to resemble a legitimate document (EXE disguised as job details)
+6. User executes the file, believing it to be safe
+7. The executable loads a local DLL (AppvIsvSubsystems64.dll)
+8. The DLL executes the actual payload
+9. A decoy file may be opened to reduce suspicion
 
-This aligns with common DLL sideloading attack patterns.
+This aligns with common DLL sideloading techniques, combined with social engineering to drive execution.
 
-This structure is designed to execute malicious code while presenting a legitimate-looking document to the user, reducing suspicion and increasing the likelihood of successful execution.
+The attack does not rely on exploitation of the browser or operating system, but instead on convincing the user to manually execute the payload.
 
 ---
 
