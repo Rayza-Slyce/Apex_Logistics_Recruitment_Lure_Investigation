@@ -174,7 +174,7 @@ Basic inspection confirmed the key files were Windows PE binaries.
 
 Further inspection of the executable showed:
 
-![Import analysis](13_c2r64.png)
+![Import analysis] (Images/13_c2r64.png)
 
 The executable references:
 
