@@ -174,22 +174,42 @@ Basic inspection confirmed the key files were Windows PE binaries.
 
 Further inspection of the executable showed:
 
-![Import analysis](Images/13_c2r64.png)
+![Import analysis](13_c2r64.png)
 
-DLL Name: AppvIsvSubsystems64.dll
+The executable references:
 
-This is important because:
+**AppvIsvSubsystems64.dll**
 
-- AppvIsvSubsystems64.dll is a legitimate Windows DLL name  
-- It is commonly abused in DLL sideloading attacks  
+This is significant because:
 
-The executable is designed to load this DLL from its local directory.
+- AppvIsvSubsystems64.dll is a legitimate Windows DLL name
+- It is commonly abused in DLL sideloading attacks
 
-The combination of a large DLL, minimal readable strings, and reliance on DLL loading behaviour suggests the executable is acting primarily as a loader rather than containing the full payload logic itself.
+This suggests the executable is designed to load a DLL from its local directory, rather than relying solely on system libraries.
 
 ---
 
-## Additional Observations
+However, additional analysis of the extracted files revealed a second DLL:
+
+**c2r64.dll (~100MB)**
+
+This file stands out due to:
+
+- Its unusually large size
+- Minimal readable strings output
+- Lack of typical characteristics expected from a standard DLL
+
+Taken together, this strongly suggests a two-stage design:
+
+- The executable acts as a loader
+- AppvIsvSubsystems64.dll enables sideloading behaviour
+- c2r64.dll is likely the primary payload, potentially packed or obfuscated
+
+This separation of roles is consistent with modern malware design, where the visible components handle execution flow, while the actual malicious logic is hidden within a secondary payload.
+
+---
+
+## Observations
 
 - c2r64.dll is unusually large (~100MB), suggesting it may contain the core payload  
 - Strings analysis revealed references such as cmd.exe and http  
