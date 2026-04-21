@@ -286,3 +286,9 @@ Even without executing the file, the intent behind the structure is clear.
 I will be continuing this analysis further, focusing on deeper inspection of the payload and observing its behaviour through controlled dynamic testing. This should give a clearer picture of how it actually operates beyond static analysis.
 
 ---
+
+## Dynamic Testing and Payload Analysis
+
+I have now finished my analysis of the payload with some interesting finding. You can read my investigation write-up here: 
+
+https://github.com/Rayza-Slyce/Recruitment_Lure_Investigation_Pt2_Dynamic_Analysis 
