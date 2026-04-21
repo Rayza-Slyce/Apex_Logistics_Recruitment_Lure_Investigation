@@ -289,6 +289,6 @@ I will be continuing this analysis further, focusing on deeper inspection of the
 
 ## Dynamic Testing and Payload Analysis
 
-I have now finished my analysis of the payload with some interesting finding. You can read my investigation write-up here: 
+I have now finished my analysis of the payload with some interesting findings. You can read my investigation write-up here: 
 
 https://github.com/Rayza-Slyce/Recruitment_Lure_Investigation_Pt2_Dynamic_Analysis 
