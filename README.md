@@ -1,4 +1,4 @@
-# Linkedin Recruitment Lure Investigation  
+# LinkedIn Recruitment Lure Investigation  
 **Date:** 17 April 2026  
 
 ---
